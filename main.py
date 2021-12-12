@@ -21,3 +21,7 @@ nquads = jsonld.normalize(
 
 with codecs.open('nquads.nq', 'w', 'utf-8') as f:
     f.write(nquads)
+#  Pour vérifier avec pyshacl que notre trace RDF est valide par rapport au shapes
+#  graph trace_model.shacl.ttl
+#  pyshacl -s ./trace_model.shacl.ttl -m -i rdfs -f human ./nquads.nq
+
