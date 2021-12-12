@@ -1,0 +1,52 @@
+{
+	"@context": {
+		"s" : "http://schema.org/",
+		"xsd" : "http://www.w3.org/2001/XMLSchema#",
+		"ex" : "http://example.com/ns#",
+		"created_at" : {
+			"@id" : "s:startDate",
+			"@type" : "xsd:dateTimeStamp"
+		},
+		"id" : "s:identifier",
+		"title" : "s:name",
+		"body" : "s:description",
+		"author_association" : "ex:authorAssociation",
+		"url" : "@id",
+		"html_url" : {
+			"@id" : "s:url",
+			"@type" : "xsd:anyURI"
+		},
+		"type" : "@type",
+		"User" : "ex:User",
+		"user" :  {
+			"@id" : "s:creator",
+			"@type" : "ex:User"
+		},
+		"login" : "s:accountId",
+		"labels" :{
+			"@id" : "ex:label",
+			"@type" : "xsd:anyURI"
+		},
+		"name" : "s:name",
+		"description" : "s:description",
+		"issue_url" : {
+			"@reverse" : "ex:comment",
+			"@type" : "@id"
+		},
+		"assignees" : {
+			"@id" : "s:assignee",
+			"@type" : "ex:User"
+		},
+		"repository_url" : {
+			"@reverse" : "ex:issue",
+			"@type" : "@id"
+		},
+		"state": "@type",
+		"open" : "ex:OpenIssue",
+		"closed" : "ex:ClosedIssue",
+		"closed_at" : {
+			"@id" : "s:endDate",
+			"@type" : "xsd:dateTimeStamp"
+		}
+	}
+}
